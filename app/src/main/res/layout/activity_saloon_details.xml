@@ -97,6 +97,34 @@
                 android:layout_marginBottom="16dp">
             </View>
 
+            <TextView
+                android:id="@+id/s_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saloon Description"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+            </View>
+
+            <TextView
+                android:id="@+id/s_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saloon Tel"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/s_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saloon Email"
+                android:layout_marginBottom="16dp"/>
+
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

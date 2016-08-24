@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent detailsIntent = new Intent(MainActivity.this, SaloonDetails.class);
                 detailsIntent.putExtra("salooname", saloonList.get(position).getSaloonName());
                 detailsIntent.putExtra("saloonId", saloonList.get(position).getSaloonId());
+                detailsIntent.putExtra("saloonDescription", saloonList.get(position).getSaloonDescription());
+                detailsIntent.putExtra("saloonTel", "+2507883009234");
+                detailsIntent.putExtra("saloonEmail", "email@test.com");
                 detailsIntent.putExtra("saloonImage", saloonList.get(position).getSaloonImage());
                 //use the created intent to go the saloon details activity
                 startActivity(detailsIntent);

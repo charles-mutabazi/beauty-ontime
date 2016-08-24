@@ -12,6 +12,13 @@ public class SaloonItems {
     private String saloonService;
     private String saloonLocation;
     private String saloonId;
+    private String saloonDescription;
+    private String saloonTel;
+    private String saloonEmail;
+    private String saloonLat;
+    private String saloonLon;
+
+    private String saloonLogo;
     private String SaloonImage;
     // private Drawable mBitamap;
 
@@ -63,12 +70,52 @@ public class SaloonItems {
         this.saloonLocation = saloonLocation;
     }
 
-//    public Drawable getmBitamap() {
-//        return mBitamap;
-//    }
-//
-//    public void setmBitamap(Drawable mBitamap) {
-//        this.mBitamap = mBitamap;
-//    }
+    public String getSaloonLogo() {
+        return saloonLogo;
+    }
+
+    public void setSaloonLogo(String saloonLogo) {
+        this.saloonLogo = saloonLogo;
+    }
+
+    public String getSaloonDescription() {
+        return saloonDescription;
+    }
+
+    public void setSaloonDescription(String saloonDescription) {
+        this.saloonDescription = saloonDescription;
+    }
+
+    public String getSaloonTel() {
+        return saloonTel;
+    }
+
+    public void setSaloonTel(String saloonTel) {
+        this.saloonTel = saloonTel;
+    }
+
+    public String getSaloonEmail() {
+        return saloonEmail;
+    }
+
+    public void setSaloonEmail(String saloonEmail) {
+        this.saloonEmail = saloonEmail;
+    }
+
+    public String getSaloonLat() {
+        return saloonLat;
+    }
+
+    public void setSaloonLat(String saloonLat) {
+        this.saloonLat = saloonLat;
+    }
+
+    public String getSaloonLon() {
+        return saloonLon;
+    }
+
+    public void setSaloonLon(String saloonLon) {
+        this.saloonLon = saloonLon;
+    }
 
 }

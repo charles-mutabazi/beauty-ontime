@@ -37,6 +37,9 @@ public class SaloonDetails extends AppCompatActivity {
     private String itemTitle;
     private String saloonId;
     private String saloonImage;
+    private String saloonDescr;
+    private String saloonTel;
+    private String saloonEmail;
 
     private ImageView mSaloonImage;
 
@@ -67,6 +70,9 @@ public class SaloonDetails extends AppCompatActivity {
         itemTitle = intent.getStringExtra("salooname");
         saloonId = intent.getStringExtra("saloonId");
         saloonImage = intent.getStringExtra("saloonImage");
+        saloonDescr = intent.getStringExtra("saloonDescription");
+        saloonTel = intent.getStringExtra("saloonTel");
+        saloonEmail = intent.getStringExtra("saloonEmail");
 
         mSaloonImage = (ImageView) findViewById(R.id.image);
 
@@ -78,7 +84,7 @@ public class SaloonDetails extends AppCompatActivity {
 
         //4. Setting list layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        // RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(layoutManager);
 
         mRecyclerView.setAdapter(mServiceAdapter);
@@ -99,6 +105,17 @@ public class SaloonDetails extends AppCompatActivity {
 // Access the RequestQueue through your singleton class.
         MySingleton.getInstance(this).addToRequestQueue(request);
 
+        TextView descr = (TextView)findViewById(R.id.s_description);
+        assert descr != null;
+        descr.setText(saloonDescr);
+
+        TextView tel = (TextView)findViewById(R.id.s_tel);
+        assert tel != null;
+        tel.setText(saloonTel);
+
+        TextView email = (TextView)findViewById(R.id.s_email);
+        assert email != null;
+        email.setText(saloonEmail);
 
 
         //ViewCompat.setTransitionName(findViewById(R.id.app_bar_layout), EXTRA_IMAGE);

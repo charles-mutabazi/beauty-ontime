@@ -23,9 +23,10 @@ public class JsonParser {
             JSONObject object     = Jarray.getJSONObject(i);
             SaloonItems items = new SaloonItems();
 
+            items.setSaloonId(object.getString("_id"));
             items.setSaloonName(object.getString("name"));
             items.setSaloonLocation(object.getString("address"));
-            items.setSaloonId(object.getString("_id"));
+            items.setSaloonDescription(object.getString("description"));
             items.setSaloonImage(object.getString("image_url_large"));
             saloonList.add(items);
         }
