@@ -16,6 +16,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -34,12 +37,13 @@ import models.ServiceItem;
 public class SaloonDetails extends AppCompatActivity {
 
     private CollapsingToolbarLayout collapsingToolbarLayout;
-    private String itemTitle;
+    private String saloonName;
     private String saloonId;
     private String saloonImage;
     private String saloonDescr;
     private String saloonTel;
     private String saloonEmail;
+    private String saloonAddress;
 
     private ImageView mSaloonImage;
 
@@ -62,17 +66,17 @@ public class SaloonDetails extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         //get extras from privious activity
         Intent intent = getIntent();
 
         //get data from inte extra
-        itemTitle = intent.getStringExtra("salooname");
+        saloonName = intent.getStringExtra("saloonName");
         saloonId = intent.getStringExtra("saloonId");
         saloonImage = intent.getStringExtra("saloonImage");
         saloonDescr = intent.getStringExtra("saloonDescription");
         saloonTel = intent.getStringExtra("saloonTel");
         saloonEmail = intent.getStringExtra("saloonEmail");
+        saloonAddress = intent.getStringExtra("saloonAddress");
 
         mSaloonImage = (ImageView) findViewById(R.id.image);
 
@@ -117,11 +121,19 @@ public class SaloonDetails extends AppCompatActivity {
         assert email != null;
         email.setText(saloonEmail);
 
+        TextView address = (TextView)findViewById(R.id.s_address);
+        assert null != address;
+        address.setText(saloonAddress);
+
+        TextView s_name = (TextView)findViewById(R.id.s_name);
+        assert null != s_name;
+        s_name.setText(saloonName);
+
 
         //ViewCompat.setTransitionName(findViewById(R.id.app_bar_layout), EXTRA_IMAGE);
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle(itemTitle);
+        collapsingToolbarLayout.setTitle(saloonName);
         collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
         collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));

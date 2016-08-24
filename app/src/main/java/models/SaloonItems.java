@@ -10,7 +10,7 @@ public class SaloonItems {
 
     private String saloonName;
     private String saloonService;
-    private String saloonLocation;
+    private String saloonAddress;
     private String saloonId;
     private String saloonDescription;
     private String saloonTel;
@@ -23,10 +23,10 @@ public class SaloonItems {
     // private Drawable mBitamap;
 
 
-//    public SaloonItems(String saloonName, String saloonService, String saloonLocation){
+//    public SaloonItems(String saloonName, String saloonService, String saloonAddress){
 //        this.saloonName = saloonName;
 //        this.saloonService = saloonService;
-//        this.saloonLocation = saloonLocation;
+//        this.saloonAddress = saloonAddress;
 //        //this.mBitamap = mBitamap;
 //    }
 
@@ -38,8 +38,8 @@ public class SaloonItems {
         return saloonName;
     }
 
-    public String getSaloonLocation() {
-        return saloonLocation;
+    public String getSaloonAddress() {
+        return saloonAddress;
     }
 
     public String getSaloonId() {
@@ -66,8 +66,8 @@ public class SaloonItems {
         this.saloonService = saloonService;
     }
 
-    public void setSaloonLocation(String saloonLocation) {
-        this.saloonLocation = saloonLocation;
+    public void setSaloonAddress(String saloonAddress) {
+        this.saloonAddress = saloonAddress;
     }
 
     public String getSaloonLogo() {

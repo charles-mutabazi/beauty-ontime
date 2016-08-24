@@ -39,15 +39,15 @@ public class SaloonListAdapter  extends RecyclerView.Adapter<SaloonListAdapter.M
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView mSaloonName, mSaloonService, mSaloonLocation;
+        public TextView mSaloonName, mSaloonDescription, mSaloonAddress;
         public ImageView mImageView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             mSaloonName = (TextView) itemView.findViewById(R.id.saloon_name);
-            mSaloonService = (TextView) itemView.findViewById(R.id.s_services);
-            mSaloonLocation = (TextView) itemView.findViewById(R.id.s_services);
+            mSaloonDescription = (TextView) itemView.findViewById(R.id.s_description);
+            mSaloonAddress = (TextView) itemView.findViewById(R.id.s_address);
             mImageView = (ImageView) itemView.findViewById(R.id.imageView);
         }
     }
@@ -69,8 +69,8 @@ public class SaloonListAdapter  extends RecyclerView.Adapter<SaloonListAdapter.M
         SaloonItems mItems = saloonItems.get(position);
 
         holder.mSaloonName.setText(mItems.getSaloonName());
-        holder.mSaloonService.setText(mItems.getSaloonService());
-        holder.mSaloonLocation.setText(mItems.getSaloonLocation());
+        holder.mSaloonDescription.setText(mItems.getSaloonDescription());
+        holder.mSaloonAddress.setText(mItems.getSaloonAddress());
 
 //        Bitmap bitmapImage = BitmapFactory.decodeResource(context.getResources(), R.drawable.barber_chairs);
 //
@@ -86,10 +86,6 @@ public class SaloonListAdapter  extends RecyclerView.Adapter<SaloonListAdapter.M
         mImageLoader = MySingleton.getInstance(context).getImageLoader();
         mImageLoader.get("http://52.193.252.113"+mItems.getSaloonImage(), ImageLoader.getImageListener(holder.mImageView,
                 R.drawable.barber_chairs, R.drawable.barber_chairs));
-
-
-
-
        // holder.mImageView.setImageDrawable(context.getResources().getDrawable(R.drawable.barber_chairs));
     }
 

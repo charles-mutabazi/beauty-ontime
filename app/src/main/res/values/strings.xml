@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Beauty OnTime</string>
     <string name="saloon_images">Saloon Images</string>
+    <string name="check_availability">Check Availability</string>
 </resources>

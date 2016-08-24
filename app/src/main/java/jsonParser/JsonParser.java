@@ -25,7 +25,7 @@ public class JsonParser {
 
             items.setSaloonId(object.getString("_id"));
             items.setSaloonName(object.getString("name"));
-            items.setSaloonLocation(object.getString("address"));
+            items.setSaloonAddress(object.getString("address"));
             items.setSaloonDescription(object.getString("description"));
             items.setSaloonImage(object.getString("image_url_large"));
             saloonList.add(items);

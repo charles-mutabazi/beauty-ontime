@@ -70,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
                 //create new activity intent with the SaloonDetails class
                 Intent detailsIntent = new Intent(MainActivity.this, SaloonDetails.class);
-                detailsIntent.putExtra("salooname", saloonList.get(position).getSaloonName());
+                detailsIntent.putExtra("saloonName", saloonList.get(position).getSaloonName());
                 detailsIntent.putExtra("saloonId", saloonList.get(position).getSaloonId());
+                detailsIntent.putExtra("saloonAddress", saloonList.get(position).getSaloonAddress());
                 detailsIntent.putExtra("saloonDescription", saloonList.get(position).getSaloonDescription());
                 detailsIntent.putExtra("saloonTel", "+2507883009234");
                 detailsIntent.putExtra("saloonEmail", "email@test.com");
