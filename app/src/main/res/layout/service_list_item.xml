@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="50dp">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
 
     <LinearLayout
         android:id="@+id/item_container"
@@ -11,26 +19,25 @@
 
         <ImageView
             android:id="@+id/service_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_content_cut_black_24dp" />
+            android:src="@drawable/cut_ic" />
 
         <TextView
             android:id="@+id/service_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Hair Cutting" />
+            android:text="Hair Cutting"
+            android:textSize="12dp" />
 
     </LinearLayout>
-
-
 
     <View
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
-        android:layout_toRightOf="@+id/item_container"
-        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="match_parent"/>
-</RelativeLayout>
+</LinearLayout>

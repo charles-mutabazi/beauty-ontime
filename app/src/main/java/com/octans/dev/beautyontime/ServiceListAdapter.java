@@ -45,7 +45,7 @@ public class ServiceListAdapter extends RecyclerView.Adapter<ServiceListAdapter.
         ServiceItem sItem = service.get(position);
 
         holder.serviceName.setText(sItem.getService_name());
-        holder.serviceIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_content_cut_black_24dp));
+        holder.serviceIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.cut_ic));
     }
 
     @Override
